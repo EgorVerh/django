@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <title>
+            Добавление новостей
+        </title>
+    </head>
+    <body>
+        <div style="margin: 10px 10px 0 10px">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.titel_text }}<br>
+            {{form.text_news}}<br>
+            <span>{{error}}</span>
+            <button class="btn btn-primary" type="submit" style="margin:0 auto; display:block"> Добавить новость </button>
+        </form>
+        </div>
+    </body>
+
+    <footer></footer>
+    </html>

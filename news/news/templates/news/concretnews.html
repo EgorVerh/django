@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>
+            div{
+        margin:10px 10px 0 10px; background-color: #e4ecec;
+        border-left: 6px solid #1f66a0;
+        color: #49152c;
+        padding: 30px 50px;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+            }
+        </style>
+        <title>
+            {{news.titel_text}}
+        </title>
+    </head>
+    <body>
+        <div>
+             {{news.pub_date}} 
+            <h1>{{news.titel_text}}</h1> 
+        </div>
+
+        <div>
+            <p>{{news.text_news}}</p>
+        </div>
+        <form action="{% url 'readnews'%}">
+            <button type="submit" class="btn btn-primary" style="margin:10px 0 0 10px">Назад</button>
+          </form>
+    </body>
+
+    <footer></footer>
+    </html>
